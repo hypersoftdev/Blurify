@@ -15,8 +15,6 @@ import android.util.AttributeSet
 import androidx.annotation.ColorRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import jp.wasabeef.glide.transformations.internal.FastBlur
-import jp.wasabeef.glide.transformations.internal.RSBlur
 import java.lang.Exception
 
 
@@ -30,6 +28,8 @@ class BlurryBackgroundView @JvmOverloads constructor(
 
     private var backgroundImage: Bitmap? = null
     private var radius = 0f // TODO improve dp
+
+
 
     private var strokeWidthGradientLine = 5f
     private val halfStrokeWidth = strokeWidthGradientLine / 2
@@ -134,10 +134,13 @@ class BlurryBackgroundView @JvmOverloads constructor(
 
     private fun applyBlur(sourceBitmap: Bitmap): Bitmap {
         return try {
-            RSBlur.blur(context, sourceBitmap, BLUR_RADIUS)
-        } catch (e: Exception) {
-            FastBlur.blur(sourceBitmap, BLUR_RADIUS, true)
+            val rsBlur = RSBlur()
+            rsBlur.blur(context, sourceBitmap, BLUR_RADIUS)
+        } catch (e: Exception){
+            val fastBlur = FastBlur()
+            fastBlur.blur(sourceBitmap, BLUR_RADIUS, true)
         }
+
     }
 
     private fun createRoundedBitmap(sourceBitmap: Bitmap?): Bitmap? {

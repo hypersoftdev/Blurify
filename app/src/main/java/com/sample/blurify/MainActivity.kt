@@ -5,6 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.hypersoft.blurify.BlurryBackgroundView
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,4 +19,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
+        blurryBackgroundView.updateBackgroundFromView()
+    }
+
+
 }
