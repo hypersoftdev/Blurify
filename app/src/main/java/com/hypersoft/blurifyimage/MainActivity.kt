@@ -1,6 +1,7 @@
 package com.hypersoft.blurifyimage
 
 import android.os.Bundle
+import android.view.ViewTreeObserver
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,13 +19,20 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
+
+        // Ensure the background is updated after the view is laid out
+        blurryBackgroundView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    blurryBackgroundView.updateBackgroundFromView()
+                    blurryBackgroundView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            }
+        )
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
-        blurryBackgroundView.updateBackgroundFromView()
-    }
 
 
 }

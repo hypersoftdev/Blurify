@@ -73,12 +73,16 @@ Here’s an example of how to use `BlurryBackgroundView` in your XML layout:
 You can modify the `BlurryBackgroundView` programmatically in your Kotlin code as shown below:
 
 ```
-override fun onWindowFocusChanged(hasFocus: Boolean) {
-    super.onWindowFocusChanged(hasFocus)
+val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
 
-    val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
-    blurryBackgroundView.updateBackgroundFromView()
-}
+    blurryBackgroundView.viewTreeObserver.addOnGlobalLayoutListener(
+            object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    blurryBackgroundView.updateBackgroundFromView()
+                    blurryBackgroundView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            }
+        )
 ```
 
 ### Custom Attributes
