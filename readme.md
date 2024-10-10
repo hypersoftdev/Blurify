@@ -108,7 +108,7 @@ val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgro
 
 ## Screen Demo
 
-![Demo](https://github.com/hypersoftdev/Blurify/blob/master/screens/screen1.jpg?raw=true)
+![Demo](https://github.com/hypersoftdev/Blurify/blob/master/screens/screen1.png?raw=true)
 
 # Acknowledgements
 
