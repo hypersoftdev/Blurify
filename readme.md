@@ -108,11 +108,11 @@ override fun onWindowFocusChanged(hasFocus: Boolean) {
 
 # Acknowledgements
 
-This work would not have been possible without the invaluable contributions of **Muhammad Asif**. His expertise, dedication, and unwavering support have been instrumental in bringing this project to fruition.
+This work would not have been possible without the invaluable contributions of **Shahrukh Gill**. His expertise, dedication, and unwavering support have been instrumental in bringing this project to fruition.
 
 ![Profile](https://github.com/hypersoftdev/Blurify/blob/master/screens/image_profile.jpg?raw=true)
 
-We are deeply grateful for **Muhammad Asif** involvement and his belief in the importance of this work. His contributions have made a significant impact, and we are honored to have had the opportunity to collaborate with him.
+We are deeply grateful for **Shahrukh Gill** involvement and his belief in the importance of this work. His contributions have made a significant impact, and we are honored to have had the opportunity to collaborate with him.
 
 # LICENSE
 
