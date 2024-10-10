@@ -1,4 +1,4 @@
-package com.sample.blurify
+package com.hypersoft.blurifyimage
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
