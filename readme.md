@@ -30,7 +30,7 @@ repositories {
 
 ### Step B: Add Dependencies
 
-Include the **Blurify** library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: [![](https://jitpack.io/v/hypersoftdev/CyclicSeekbar.svg)](https://jitpack.io/#hypersoftdev/CyclicSeekbar)
+Include the **Blurify** library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: 
 
 ```
 implementation 'com.github.hypersoftdev:CyclicSeekbar:x.x.x'
@@ -102,13 +102,13 @@ override fun onWindowFocusChanged(hasFocus: Boolean) {
 
 ## Screen Demo
 
-![Demo]()
+![Demo](https://github.com/hypersoftdev/Blurify/blob/master/screens/screen1.jpg?raw=true)
 
 # Acknowledgements
 
 This work would not have been possible without the invaluable contributions of **Muhammad Asif**. His expertise, dedication, and unwavering support have been instrumental in bringing this project to fruition.
 
-![Profile]()
+![Profile](https://github.com/hypersoftdev/Blurify/blob/master/screens/image_profile.jpg?raw=true)
 
 We are deeply grateful for **Muhammad Asif** involvement and his belief in the importance of this work. His contributions have made a significant impact, and we are honored to have had the opportunity to collaborate with him.
 
