@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.hypersoft.cyclicseekbar"
+    namespace = "com.hypersoft.blurify"
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -38,16 +38,15 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.rebound)
 
 }
 
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.hypersoft.cyclicseekbar"
-            artifactId = "seekbar"
-            version = "1.2.5"
+            groupId = "com.hypersoft.blurify"
+            artifactId = "blurify"
+            version = "1.0.1"
 
             afterEvaluate {
                 from(components["release"])
