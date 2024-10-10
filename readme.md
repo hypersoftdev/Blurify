@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/hypersoftdev/Blurify.svg)](https://jitpack.io/#hypersoftdev/Blurify)
+
 # Blurify
 
 **Blurify** is a custom `ConstraintLayout` that enables you to add a blurred background effect to your views in Android. It allows for the application of a blur to the background of any view while also offering customizable gradient overlays, rounded corners, and more.
@@ -30,10 +32,10 @@ repositories {
 
 ### Step B: Add Dependencies
 
-Include the **Blurify** library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: 
+Include the **Blurify** library in your **app-level** `build.gradle` file. Replace `x.x.x` with the latest version: [![](https://jitpack.io/v/hypersoftdev/Blurify.svg)](https://jitpack.io/#hypersoftdev/Blurify)
 
 ```
-implementation 'com.github.hypersoftdev:CyclicSeekbar:x.x.x'
+implementation 'com.github.hypersoftdev:Blurify:x.x.x'
 ```
 
 ## Usage
