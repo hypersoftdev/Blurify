@@ -111,7 +111,7 @@ You can modify the `BlurryBackgroundView` programmatically in your Kotlin code a
 
 ## Screen Demo
 
-![Demo](https://github.com/hypersoftdev/Blurify/blob/master/screens/screen1.jpg?raw=true)
+![Demo](https://github.com/hypersoftdev/Blurify/blob/master/screens/screen1.png?raw=true)
 
 # Acknowledgements
 
