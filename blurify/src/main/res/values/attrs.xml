@@ -4,6 +4,7 @@
         <attr name="startColorGradient" format="reference"/>
         <attr name="backgroundColorOverlay" format="reference"/>
         <attr name="cornerRadiusView" format="float"/>
+        <attr name="blurRadius" format="float" />
         <attr name="strokeWidthGradient" format="float"/>
     </declare-styleable>
 </resources>

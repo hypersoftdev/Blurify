@@ -56,16 +56,16 @@ Here’s an example of how to use `BlurryBackgroundView` in your XML layout:
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-<com.hypersoft.blurify.BlurryBackgroundView
-    android:id="@+id/blurryBackgroundView"
-    android:layout_width="0dp"
-    android:layout_height="300dp"
-    app:backgroundColorOverlay="@color/gray_white"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:startColorGradient="@color/gray" />
-
+ <com.hypersoft.blurify.BlurryBackgroundView
+        android:id="@+id/blurryBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        app:blurRadius="30"
+        app:backgroundColorOverlay="@color/gray_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startColorGradient="@color/gray" />
 ```
 
 ### Programmatically
@@ -73,13 +73,15 @@ Here’s an example of how to use `BlurryBackgroundView` in your XML layout:
 You can modify the `BlurryBackgroundView` programmatically in your Kotlin code as shown below:
 
 ```
-val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
+ val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgroundView)
 
-    blurryBackgroundView.viewTreeObserver.addOnGlobalLayoutListener(
+        // Ensure the background is updated after the view is laid out
+        blurryBackgroundView.viewTreeObserver.addOnGlobalLayoutListener(
             object : ViewTreeObserver.OnGlobalLayoutListener {
                 override fun onGlobalLayout() {
                     blurryBackgroundView.updateBackgroundFromView()
                     blurryBackgroundView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    blurryBackgroundView.setBlurRadius(30f)
                 }
             }
         )
@@ -87,12 +89,13 @@ val blurryBackgroundView = findViewById<BlurryBackgroundView>(R.id.blurryBackgro
 
 ### Custom Attributes
 
-| **Attribute**            | **Description**                                          | **Default Value**       |
-|--------------------------|----------------------------------------------------------|-------------------------|
-| `cornerRadiusView`        | Sets the corner radius for the blurred background.       | `0dp`                   |
-| `backgroundColorOverlay`  | The color of the overlay applied on top of the blur.     | `@color/gray_white`      |
-| `startColorGradient`      | Start color for the gradient applied on the background.  | `@color/secondary_text`  |
-| `strokeWidthGradient`     | The width of the stroke used for the gradient line.      | `5dp`                   |
+| **Attribute**            | **Description**                                         | **Default Value**       |
+|--------------------------|---------------------------------------------------------|-------------------------|
+| `cornerRadiusView`       | Sets the corner radius for the blurred background.      | `0dp`                   |
+| `blurRadius`             | Sets the blur radius for the blurred background.        | `25`                    |
+| `backgroundColorOverlay` | The color of the overlay applied on top of the blur.    | `@color/gray_white`     |
+| `startColorGradient`     | Start color for the gradient applied on the background. | `@color/secondary_text` |
+| `strokeWidthGradient`    | The width of the stroke used for the gradient line.     | `5dp`                   |
 
 ### How It Works
 

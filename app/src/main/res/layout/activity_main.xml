@@ -22,6 +22,7 @@
         android:id="@+id/blurryBackgroundView"
         android:layout_width="0dp"
         android:layout_height="350dp"
+        app:blurRadius="30"
         app:backgroundColorOverlay="@color/gray_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

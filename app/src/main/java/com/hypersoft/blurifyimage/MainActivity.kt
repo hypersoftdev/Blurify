@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onGlobalLayout() {
                     blurryBackgroundView.updateBackgroundFromView()
                     blurryBackgroundView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    blurryBackgroundView.setBlurRadius(30f)
                 }
             }
         )
